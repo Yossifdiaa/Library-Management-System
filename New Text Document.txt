@@ -1,0 +1,105 @@
+				Library Management System API Documentation
+
+1. Introduction:
+
+This documentation provides an overview of how to run the Library Management System application and how to interact with its API endpoints. The application is designed to manage books, patrons, and borrowing records in a library.
+
+2. Running the Application:
+
+2.1. Clone the Repository
+
+Obtain a copy of the project repository from the provided source.
+Navigate to the project directory.
+
+
+2.2. Build the Application
+
+Ensure that the necessary build tools (such as Maven) are installed on your system.
+Execute the build process to compile the application code and manage dependencies.
+
+2.3. Run the Application
+
+Start the application using the appropriate command for your build tool.
+The application will start and listen on port 8080 by default.
+
+
+2.4. Access the Application
+
+Open a web browser and enter the URL http://localhost:8080 to access the application.
+
+
+3. API Endpoints:-
+
+3.1. Books endpoints:
+
+3.1.1. Retrieve All Books
+
+Endpoint: /api/books
+Description: Retrieves a list of all books available in the library.
+
+
+3.1.2. Retrieve a Book by ID
+
+Endpoint: /api/books/{id}
+Description: Retrieves details of a specific book by its unique ID.
+
+3.1.3. Add a New Book
+
+Endpoint: /api/books
+Description: Adds a new book to the library's collection.
+
+3.1.4. Update an Existing Book
+
+Endpoint: /api/books/{id}
+Description: Updates the information of an existing book based on its unique ID.
+
+3.1.5. Delete a Book
+
+Endpoint: /api/books/{id}
+Description: Removes a book from the library using its unique ID.
+
+
+3.2. Patrons endpoints:
+
+3.2.1. Retrieve All Patrons
+
+Endpoint: /api/patrons
+Description: Retrieves a list of all registered patrons in the system.
+
+3.2.2. Retrieve a Patron by ID
+
+Endpoint: /api/patrons/{id}
+Description: Retrieves details of a specific patron by their unique ID.
+
+
+3.2.3. Add a New Patron
+
+Endpoint: /api/patrons
+Description: Registers a new patron in the system.
+
+
+
+3.2.4. Update an Existing Patron
+
+Endpoint: /api/patrons/{id}
+Description: Updates the information of an existing patron based on their unique ID.
+
+
+3.2.5. Delete a Patron
+
+Endpoint: /api/patrons/{id}
+Description: Removes a patron from the system using their unique ID.
+
+
+3.3. Borrowing Records endpoints:
+
+3.3.1. Allow a Patron to Borrow a Book
+
+Endpoint: /api/borrow/{bookId}/patron/{patronId}
+Description: Records the borrowing of a book by a patron. This operation associates a specific book with a patron and records the borrowing details.
+
+
+3.3.2. Record the Return of a Borrowed Book
+
+Endpoint: /api/return/{bookId}/patron/{patronId}
+Description: Records the return of a borrowed book. This operation updates the borrowing record to indicate that the book has been returned.
